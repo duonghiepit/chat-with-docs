@@ -13,11 +13,7 @@
 # 1) Khởi động toàn bộ stack
 docker compose up -d --build
 
-# 2) Tải model trong container Ollama (lần đầu)
-docker exec -it ollama ollama pull llama3.1:8b
-docker exec -it ollama ollama pull nomic-embed-text
-
-# 3) Kiểm tra health
+# 2) Kiểm tra health
 curl -s http://localhost:8080/health
 ```
 
