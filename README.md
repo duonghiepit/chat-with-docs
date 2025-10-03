@@ -4,8 +4,8 @@
 - Docker + Docker Compose
 
 ## Dịch vụ
-- API (Go): `services/api`
-- FAISS (Python/FastAPI): `services/faiss`
+- API (Go): `api`
+- FAISS (Python/FastAPI): `faiss`
 - Postgres 16 (+ pgvector), Redis 7, Ollama (CPU)
 
 ## Chạy nhanh
