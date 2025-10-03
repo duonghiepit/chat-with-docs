@@ -25,7 +25,7 @@ services:
       - appnet
 
   ollama:
-    build: ./services/ollama
+    build: ./ollama
     container_name: ollama
     ports:
       - "11434:11434"
@@ -40,7 +40,7 @@ services:
     #  retries: 60
 
   api:
-    build: ./services/api
+    build: ./api
     environment:
       POSTGRES_URL: postgres://postgres:postgres@postgres:5432/finqa?sslmode=disable
       REDIS_ADDR: redis:6379
@@ -63,7 +63,7 @@ services:
       - appnet
 
   faiss:
-    build: ./services/faiss
+    build: ./faiss
     ports:
       - "8000:8000"
     networks:
@@ -71,7 +71,7 @@ services:
 
   web:
     build:
-      context: ./services/web
+      context: ./web
       args:
         VITE_API_URL: http://localhost:8080
     depends_on:
